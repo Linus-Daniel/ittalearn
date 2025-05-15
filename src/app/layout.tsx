@@ -9,8 +9,8 @@ import { Footer } from "@/components/layout/Footer";
 
 
 export const metadata: Metadata = {
-  title: "Food Delivery App",
-  description: "Order delicious food online",
+  title: "ITTA Learn",
+  description: "Making the future bright"
 };
 
 export default function RootLayout({
@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="">
-      <body className="antialiased">
+      <body className="bg-gradient-to-br from-gray-900 to-gray-800 text-white font-sans overflow-x-hidden ">
         <AuthProvider>
           <CartProvider>
           

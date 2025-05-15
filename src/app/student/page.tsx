@@ -102,12 +102,12 @@ export default function StudentDashboard() {
         </section>
 
         <section className="bg-gray-800/50 border border-gray-700 rounded-xl p-6">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center flex-col md:flex-row justify-between">
             <div>
               <h2 className="text-xl font-semibold mb-2">Continue Learning</h2>
               <p className="text-gray-400">Pick up where you left off</p>
             </div>
-            <Button >
+            <Button className=' flex items-center ' >
               <HiPlus className="w-4 h-4 mr-2" />
               Find New Courses
             </Button>

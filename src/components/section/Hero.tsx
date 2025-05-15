@@ -22,10 +22,10 @@ export const Hero = () => {
             Start your journey today with our AI-powered learning platform.
           </p>
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-            <Button>
+            <Button className='flex items-center justify-center md:justify-evenly'>
               Start Learning <HiArrowRight className="w-5 h-5 ml-2" />
             </Button>
-            <Button variant="secondary">
+            <Button variant="secondary" className='flex items-center  justify-center md:justify-evenly`'>
               <HiPlay className="w-5 h-5 mr-2" /> Watch Demo
             </Button>
           </div>

@@ -54,7 +54,6 @@ export const CourseCard = ({ course, variant }: CourseCardProps) => {
           </div>
         )}
 
-// Add to the existing CourseCard component
 {variant === 'completed' && (
   <div className="mt-4 pt-3 border-t border-gray-700/50">
     <div className="flex justify-between text-xs text-gray-500">

@@ -23,8 +23,7 @@ export default function Home() {
     { label: 'Features', href: '#features' },
     { label: 'Pricing', href: '#pricing' },
     { label: 'About', href: '#about' },
-    {label:"Signin",href:"/signin"},
-    {label:"SignUp",href:"/signup"},
+   
   ];
 
   return (
@@ -57,8 +56,6 @@ export default function Home() {
         <ContactSection />
 
       </main>
-
-      {/* <Footer /> */}
     </div>
   );
 }

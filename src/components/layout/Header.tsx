@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { HiAcademicCap} from "react-icons/hi"
 import { Button } from '../common/Button';
 import { NavItem } from '@/types';
+import Link from 'next/link';
 
 type HeaderProps = {
   navItems: NavItem[];
@@ -44,8 +45,16 @@ export const Header = ({ navItems, onMenuToggle }: HeaderProps) => {
         transition={{ duration: 0.5 }}
         className="hidden md:flex items-center space-x-4"
       >
+        <Link href={"/signin"}>
         <Button variant="secondary">Log In</Button>
+        
+        </Link>
+        
+        
+        <Link href={"/signup"}>
         <Button>Sign Up</Button>
+        
+        </Link>
       </motion.div>
 
       <button 

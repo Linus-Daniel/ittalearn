@@ -10,7 +10,7 @@ export const Sidebar = () => {
   const navItems = [
     {
       name: 'My Courses',
-      href: '/student/dashboard',
+      href: '/student',
       icon: HiBookOpen,
     },
     {

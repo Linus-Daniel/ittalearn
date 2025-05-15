@@ -5,83 +5,7 @@ import {  HiBookOpen, HiClock, HiChartBar } from 'react-icons/hi';
 import {HiTrophy} from "react-icons/hi2"
 import { CourseCard } from '@/components/student/CourseCard';
 
-const profileData = {
-  user: {
-    name: 'Alex Johnson',
-    email: 'alex.johnson@example.com',
-    bio: 'Frontend developer passionate about React and TypeScript. Currently learning advanced patterns to improve my skills.',
-    joinDate: 'January 2023',
-    avatar: '/avatars/alex-johnson.jpg',
-    stats: {
-      coursesCompleted: 4,
-      totalHours: 42,
-      currentStreak: 7,
-      achievements: 8
-    }
-  },
-  activeCourses: [
-    {
-      id: '1',
-      title: 'Advanced React Patterns',
-      instructor: 'Sarah Johnson',
-      progress: 65,
-      thumbnail: '/courses/react.jpg',
-      category: 'Web Development'
-    },
-    {
-      id: '2',
-      title: 'TypeScript Masterclass',
-      instructor: 'Michael Chen',
-      progress: 30,
-      thumbnail: '/courses/typescript.jpg',
-      category: 'Programming'
-    }
-  ],
-  completedCourses: [
-    {
-      id: '3',
-      title: 'JavaScript Fundamentals',
-      instructor: 'Emma Rodriguez',
-      progress: 100,
-      thumbnail: '/courses/javascript.jpg',
-      category: 'Programming',
-      completedDate: 'March 15, 2023'
-    },
-    {
-      id: '4',
-      title: 'CSS Grid and Flexbox',
-      instructor: 'Priya Patel',
-      progress: 100,
-      thumbnail: '/courses/css.jpg',
-      category: 'Web Development',
-      completedDate: 'February 28, 2023'
-    }
-  ],
-  recentAchievements: [
-    {
-      id: '1',
-      title: 'Fast Learner',
-      description: 'Completed 3 lessons in one day',
-      icon: HiTrophy,
-      date: 'May 15, 2023',
-      rarity: 'common'
-    },
-    {
-      id: '2',
-      title: 'Course Completer',
-      description: 'Finished your first course',
-      icon: HiTrophy,
-      date: 'May 10, 2023',
-      rarity: 'rare'
-    }
-  ],
-  activity: [
-    { date: 'Today', action: 'Completed lesson: Custom Hooks', course: 'Advanced React Patterns' },
-    { date: 'Yesterday', action: 'Started new course: TypeScript Masterclass', course: '' },
-    { date: '2 days ago', action: 'Earned achievement: Fast Learner', course: 'Advanced React Patterns' },
-    { date: '1 week ago', action: 'Completed quiz: React Context', course: 'Advanced React Patterns' }
-  ]
-};
+
 
 export default function ProfilePage() {
 
@@ -105,7 +29,7 @@ export default function ProfilePage() {
             title: 'Mastering Next.js',
             instructor: 'David Kim',
             progress: 45,
-            thumbnail: '/courses/nextjs.jpg',
+            thumbnail: '/images/nextjs.webp',
             category: 'Web Development'
           },
           {
@@ -113,7 +37,7 @@ export default function ProfilePage() {
             title: 'UI/UX Design Principles',
             instructor: 'Jane Doe',
             progress: 20,
-            thumbnail: '/courses/uiux.jpg',
+            thumbnail: '/images/uiux.png',
             category: 'Design'
           }
         ],
@@ -123,7 +47,7 @@ export default function ProfilePage() {
             title: 'HTML & CSS Basics',
             instructor: 'John Smith',
             progress: 100,
-            thumbnail: '/courses/htmlcss.jpg',
+            thumbnail: '/images/htmlcss.png',
             category: 'Frontend',
             completedDate: 'April 10, 2024'
           },
@@ -132,7 +56,7 @@ export default function ProfilePage() {
             title: 'Git & GitHub Essentials',
             instructor: 'Amy Wong',
             progress: 100,
-            thumbnail: '/courses/git.jpg',
+            thumbnail: '/images/git.avif',
             category: 'DevOps',
             completedDate: 'March 28, 2024'
           },
@@ -141,7 +65,7 @@ export default function ProfilePage() {
             title: 'Responsive Web Design',
             instructor: 'Ali Khan',
             progress: 100,
-            thumbnail: '/courses/responsive.jpg',
+            thumbnail: '/images/webdesign.jpg',
             category: 'Frontend',
             completedDate: 'February 20, 2024'
           }
@@ -230,7 +154,7 @@ export default function ProfilePage() {
         <div className="bg-gray-800/50 border border-gray-700 rounded-xl p-6">
           <h2 className="text-xl font-semibold mb-6">Active Courses</h2>
           {profileData.activeCourses.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {profileData.activeCourses.map((course) => (
                 <CourseCard 
                   key={course.id}
@@ -253,7 +177,7 @@ export default function ProfilePage() {
         {profileData.completedCourses.length > 0 && (
           <div className="bg-gray-800/50 border border-gray-700 rounded-xl p-6">
             <h2 className="text-xl font-semibold mb-6">Completed Courses</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {profileData.completedCourses.map((course) => (
                 <CourseCard 
                   key={course.id}
