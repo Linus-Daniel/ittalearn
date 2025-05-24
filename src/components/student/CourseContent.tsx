@@ -22,14 +22,14 @@ type CourseContentProps = {
 const CourseContent = ({ course }: CourseContentProps) => {
   return (
     <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl overflow-hidden">
-      <div className="aspect-video bg-gray-700 flex items-center justify-center">
+      {/* <div className="aspect-video bg-gray-700 flex items-center justify-center">
         <div className="text-center">
           <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
             <HiPlay className="w-8 h-8 text-white" />
           </div>
           <p className="text-gray-400">Now Playing: Custom Hooks</p>
         </div>
-      </div>
+      </div> */}
       
       <div className="p-6">
         <h1 className="text-2xl font-bold mb-2">{course.title}</h1>

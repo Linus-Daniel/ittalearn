@@ -1,11 +1,28 @@
-export interface Course {
+
+export interface Lesson {
   title: string;
-  category: string;
   duration: string;
-  students: string;
-  rating: number;
+  completed: boolean;
 }
-// Add these to your existing types
+
+export interface Course {
+  id: string;
+  title: string;
+  instructor: string;
+  rating: number;
+  students: number;
+  duration: string;
+  category: string;
+  difficulty: 'beginner' | 'intermediate' | 'advanced';
+  price: number;
+  discountPrice: number;
+  thumbnail: string;
+  description?: string;
+  lessons: Lesson[];
+  requirements: string[];
+}
+
+
 export interface BlogPost {
   id: string;
   title: string;
@@ -56,15 +73,6 @@ export interface NavItem {
   href: string;
 }
 
-export interface Course {
-  id: string;
-  title: string;
-  category: string;
-  duration: string;
-  students: string;
-  rating: number;
-  isTopRated?: boolean;
-}
 
 export interface Feature {
   title: string;

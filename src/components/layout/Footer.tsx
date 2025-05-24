@@ -1,5 +1,7 @@
+"use client";
 import { HiAcademicCap } from 'react-icons/hi';
 import { motion } from 'framer-motion';
+import { usePathname } from 'next/navigation';
 
 export const Footer = () => {
   const footerLinks = [
@@ -17,8 +19,14 @@ export const Footer = () => {
     }
   ];
 
+  const pathname = usePathname()
+
+  const showFooter = pathname != "/"
+
+  
+
   return (
-    <footer className="relative z-10 px-6 py-12 bg-gray-800/50 backdrop-blur-sm border-t border-gray-700">
+    <footer className={`relative  ${showFooter && "hidden"} z-10 px-6 py-12 bg-gray-800/50 backdrop-blur-sm border-t border-gray-700`}>
       <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
         <div>
           <div className="flex items-center space-x-2 mb-6">

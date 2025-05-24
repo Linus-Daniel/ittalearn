@@ -14,6 +14,8 @@ import { NavItem } from '@/types';
 import { Hero } from '@/components/section/Hero';
 import { ContactSection } from '@/components/section/Contact';
 import { TeamSection } from '@/components/section/TeamSection';
+import { ExploreCourses } from '@/components/section/Explore';
+import { CourseBrowser } from '@/components/section/Categories';
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -50,7 +52,9 @@ export default function Home() {
         <Hero />
         <Features />
         <FeatureShowcase />
+        <CourseBrowser />
         <Courses  />
+        <ExploreCourses />
         <TeamSection  />
         <CTA />
         <ContactSection />

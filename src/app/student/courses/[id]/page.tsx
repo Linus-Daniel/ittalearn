@@ -73,6 +73,7 @@ const courseData = {
         {
           id: '7',
           title: 'Code Splitting',
+            
           duration: '10:15',
           completed: false,
           type: 'video'
