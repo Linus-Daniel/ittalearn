@@ -90,7 +90,7 @@ export default function StudentDashboard() {
             </Button>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {recommendedCourses.map((course) => (
               <CourseCard 
                 key={course.id}
@@ -107,9 +107,12 @@ export default function StudentDashboard() {
               <h2 className="text-xl font-semibold mb-2">Continue Learning</h2>
               <p className="text-gray-400">Pick up where you left off</p>
             </div>
-            <Button className=' flex items-center ' >
+            <Button >
+              <a href='/courses' className=' flex items-center '>
+
               <HiPlus className="w-4 h-4 mr-2" />
               Find New Courses
+              </a>
             </Button>
           </div>
         </section>

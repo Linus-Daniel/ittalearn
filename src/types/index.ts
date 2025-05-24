@@ -18,6 +18,7 @@ export interface Course {
   discountPrice: number;
   thumbnail: string;
   description?: string;
+  isTopRated?:boolean
   lessons: Lesson[];
   requirements: string[];
 }

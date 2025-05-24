@@ -71,14 +71,14 @@ export const CourseCard = ({ course, variant }: CourseCardProps) => {
         )}
         
         <Link
-          href={`/student/courses/${course.id}`}
+          href={`${variant==='enrolled'?`/student/courses/${course.id}`:`/courses/${course.id}`}`}
           className={`block w-full text-center py-2 px-4 rounded-lg ${
             variant === 'enrolled'
               ? 'bg-purple-600 hover:bg-purple-700'
               : 'border border-gray-600 hover:bg-gray-700'
           } transition-colors`}
         >
-          {variant === 'enrolled' ? 'Continue' : 'Enroll Now'}
+          {variant === 'enrolled' ? 'Continue' : 'View course'}
         </Link>
       </div>
     </div>

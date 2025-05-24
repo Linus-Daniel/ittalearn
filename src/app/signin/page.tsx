@@ -22,7 +22,7 @@ export default function SignInPage() {
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1500));
-      router.push('/dashboard');
+      router.push('/student');
     } catch (err) {
       setError('Invalid email or password. Please try again.');
     } finally {

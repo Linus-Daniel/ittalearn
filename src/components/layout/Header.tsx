@@ -1,5 +1,7 @@
+'use client';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { HiAcademicCap} from "react-icons/hi"
+import { HiAcademicCap } from "react-icons/hi";
 import { Button } from '../common/Button';
 import { NavItem } from '@/types';
 import Link from 'next/link';
@@ -10,8 +12,23 @@ type HeaderProps = {
 };
 
 export const Header = ({ navItems, onMenuToggle }: HeaderProps) => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className="relative z-50 px-6 py-4 flex justify-between items-center">
+    <nav
+      className={`sticky top-0 z-50 px-6 py-4 md:py-2 flex justify-between items-center transition-colors duration-300 ${
+        scrolled ? 'bg-gray-900/90 backdrop-blur-md shadow-md' : 'bg-transparent'
+      }`}
+    >
       <motion.div 
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
@@ -45,15 +62,11 @@ export const Header = ({ navItems, onMenuToggle }: HeaderProps) => {
         transition={{ duration: 0.5 }}
         className="hidden md:flex items-center space-x-4"
       >
-        <Link href={"/signin"}>
-        <Button variant="secondary">Log In</Button>
-        
+        <Link href="/signin">
+          <Button variant="secondary">Log In</Button>
         </Link>
-        
-        
-        <Link href={"/signup"}>
-        <Button>Sign Up</Button>
-        
+        <Link href="/signup">
+          <Button>Sign Up</Button>
         </Link>
       </motion.div>
 

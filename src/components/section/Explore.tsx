@@ -13,8 +13,7 @@ export const ExploreCourses = () => {
     { name: 'Computer Science', count: 668 },
     { name: 'Arts and Humanities', count: 338 },
     { name: 'Math and Logic', count: 70 },
-    { name: 'Health', count: null },
-    { name: 'Physical Science and Engineering', count: 413 },
+   
   ];
 
   const filters = [

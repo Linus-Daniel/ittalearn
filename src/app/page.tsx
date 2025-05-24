@@ -37,17 +37,6 @@ export default function Home() {
 
       <AnimatedBackground />
 
-      <Header 
-        navItems={navItems} 
-        onMenuToggle={() => setIsMenuOpen(!isMenuOpen)} 
-      />
-
-      <MobileMenu 
-        isOpen={isMenuOpen} 
-        navItems={navItems} 
-        onClose={() => setIsMenuOpen(false)} 
-      />
-
       <main>
         <Hero />
         <Features />

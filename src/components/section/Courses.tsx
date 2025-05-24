@@ -18,7 +18,7 @@ export const Courses = () => {
         subtitle="Join thousands of students learning with our top-rated courses" 
       />
 
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
         {courses.slice(0,6).map((course, index) => (
           <motion.div
             key={course.id}
